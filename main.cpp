@@ -35,6 +35,7 @@ void sendAC(Stream *serial)
     sendFloat(&accValues[1], serial);
     serial->putc('z');
     sendFloat(&accValues[2], serial);
+    serial->putc(4); // End of transmission
 }
 
 int main(void)
